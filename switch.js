@@ -1,5 +1,5 @@
-/* 
-let procesador=parseInt(prompt('ingrese la opción del procesador'));
+ 
+/* let procesador=parseInt(prompt('ingrese la opción del procesador'));
 let memoriaRam=parseInt(prompt('ingrese la opción memoria RAM'));
 let extensionDisco=parseInt(prompt('Si extiende el disco (1 para extender , 0 para no extender)'));
 //opciones de procesador
@@ -12,8 +12,63 @@ let ram16=2;
 let ram32=3;
 
 let montoFinal=0;
+if(procesador===1){
+    switch(memoriaRam){
+        case 1:
+            montoFinal=800;
+            break;
+        case 2:
+            montoFinal=900;
+            break;
+        case 3:
+            montoFinal=1000;
+        break;
+        default:    
+            window.alert('Opción de ram no valida');
+            break;
+    }
+}
+if(procesador===2){
+    switch(memoriaRam){
+    case 1:
+        montoFinal=900;
+        break;
+    case 2:
+        montoFinal=1000;
+        break;
+    case 3:
+        montoFinal=1400;
+    break;
+    default:    
+        window.alert('Opción de ram no valida');
+        break;
+    }
+}
+if(procesador===3){
+    switch (procesador){
+        case 1:
+            montoFinal=1200;
+            break;
+    case 2:
+        montoFinal=1400;
+            break;
+    case 3:
+        montoFinal=2000;
+            break;
+    default:
+        window.alert('Opción de ram no valida');
+        break;
+    }
+}
+if(extensionDisco==1){
+    montoFinal += 300;
+}
 
-switch(procesador){
+
+window.alert(`El monto de la máquina sellecionada es ${montoFinal} USD`); 
+ */
+//Esta seria una opción no tan recomendable ya que es poco legible
+/* switch(procesador){
 case 1:
     switch(memoriaRam){
 case 1:
@@ -29,7 +84,7 @@ default:
     window.alert('Opción de ram no valida');
     break;
 
-}
+}   
     break;
 case 2:
 switch (memoriaRam) {
@@ -72,8 +127,8 @@ if(extensionDisco==1){
 }
 
 
-window.alert(`El monto de la máquina sellecionada es ${montoFinal} USD`); */
-
+window.alert(`El monto de la máquina sellecionada es ${montoFinal} USD`); 
+ */
 /*
 Ejercicio 1 - Tienda de cámaras fotográficas
 Una tienda vende cámaras con las siguientes opciones:
@@ -130,3 +185,82 @@ Usa default para opciones inválidas.
 */
 
 //ejercicio 1
+/*
+Ejercicio 1 - Tienda de cámaras fotográficas
+Una tienda vende cámaras con las siguientes opciones:
+
+Tipo de cámara: Básica (1) USD 300. Profesional (2) USD 600. Ultra (3) USD 1000.
+
+Lente adicional: Sin lente (1), Telefoto (2) USD 150, Gran angular (3) USD 200.
+
+Estuche premium: Sí (1) USD 50, No (0).
+El programa debe pedir el tipo de cámara, el lente y si desea el estuche, luego calcular el total.
+Tip: Usa switch para manejar el tipo de cámara y el lente por separado.
+*/
+
+let tipoCamara=parseInt(prompt('ingrese la opción de camara'));
+let lenteAdicional=parseInt(prompt('ingrese la opcion de lente adicional'));
+let estuchePremium=parseInt(prompt('si desea comprar el estuche(1 para agregar,0 para no agregar)'))
+
+let camaraBasica=1;
+let camaraProfesional=2;
+let camaraUltra=3;
+
+let sinLente=1;
+let teleFoto=2;
+let granAngular=3;
+
+let montoFinal=0;
+
+if(tipoCamara===1){
+switch(lenteAdicional){
+case 1:
+    montoFinal=300;
+    break;
+case 2:
+    montoFinal=300 + 150;
+    break;
+case 3:
+    montoFinal=300 + 200;
+    break;
+    default:
+        window.alert('opción de lente no valida');
+        break;
+}
+}
+if(tipoCamara===2){
+switch(lenteAdicional){
+case 1:
+    montoFinal=600;
+    break;
+case 2:
+    montoFinal=600 + 150;
+    break;
+case 3:
+    montoFinal=600 + 200;
+    break;
+    default:
+        window.alert('opción de lente no valida');
+        break;
+}
+}
+if(tipoCamara===3){
+switch(lenteAdicional){
+case 1:
+    montoFinal=1000;
+    break;
+case 2: 
+    montoFinal=1000 + 150;
+    break;
+case 3:
+    montoFinal=1000 + 200;
+    break;
+    default:
+        window.alert('opción de lente no valida');
+        break;
+}
+}
+if(estuchePremium===1){
+montoFinal=montoFinal + 50;
+}
+window.alert(`El monto de de la camara es ${montoFinal} USD`); 
