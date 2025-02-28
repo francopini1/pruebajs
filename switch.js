@@ -197,7 +197,7 @@ Estuche premium: Sí (1) USD 50, No (0).
 El programa debe pedir el tipo de cámara, el lente y si desea el estuche, luego calcular el total.
 Tip: Usa switch para manejar el tipo de cámara y el lente por separado.
 */
-
+/* 
 let tipoCamara=parseInt(prompt('ingrese la opción de camara'));
 let lenteAdicional=parseInt(prompt('ingrese la opcion de lente adicional'));
 let estuchePremium=parseInt(prompt('si desea comprar el estuche(1 para agregar,0 para no agregar)'))
@@ -263,4 +263,114 @@ case 3:
 if(estuchePremium===1){
 montoFinal=montoFinal + 50;
 }
-window.alert(`El monto de de la camara es ${montoFinal} USD`); 
+window.alert(`El monto de de la camara es ${montoFinal} USD`);  */
+
+/*
+ejercicio 2
+Ejercicio 2 - Servicio de streaming
+Un servicio ofrece tres planes: Básico (1) USD 10/mes, Estándar (2) USD 15/mes, Premium (3) USD 20/mes. Dependiendo de la cantidad de pantallas:
+
+Pantallas: 1 (1), 2 (2), 4 (3).
+
+Básico solo permite 1 pantalla.
+
+Estándar permite hasta 2 (si elige 3, cobrar USD 5 extra).
+
+Premium permite hasta 4.
+Además, si agrega contenido 4K (1 para sí, 0 para no), suma USD 8. Calcular el monto final.
+Tip: Valida combinaciones inválidas (ej: Básico + 2 pantallas).
+*/
+/*
+planes:
+basico opción 1 =10usd
+Estandar opcion 2=15usd
+premium opcion 3=20usdc
+
+pantallas: 
+1 pantalla opcion 1
+2 pantallas opcion 2
+4 pantallas opcion 3 
+
+extra:
+basico permite solo una pantallla
+estandar permite solo 2(si elige 3,cobrar 5 usd más)
+premium hasta 4 pantallas
+
+Adicional
+si agrega contenido 4k(1para si, cero para no) y al monto final se le suma 8usd
+ */
+
+let planes=parseInt(prompt('ingrese la opción de plan requrida'));
+let pantallas=parseInt(prompt('ingrese las opciones de cantidad de pantallas'));
+let contenido4k=parseInt(prompt('si desea agregar contenido 4k(1 para si,0 para no)'));
+
+let planBasico=1;
+let planEst0andar=2;
+let planPremium=3;
+
+let pantalla1=1;
+let pantallas2=2;
+let pantallas3=3
+let pantallas4=4
+
+let montoFinal=0;
+
+if(planes===1){
+    switch(pantallas){
+case 1:
+    montoFinal=10;
+    break;
+case 2:
+    window.alert('opción no valida de pantallas');
+break;
+case 3:
+    window.alert('opción no valida de pantallas');
+    break;
+case 4:
+    window.alert('opción no valida de pantallas');
+    break;
+    default:
+        window.alert('la opción es inexistente');
+        break;
+    }
+}
+if(planes===2){
+switch(pantallas){
+case 1:
+    montoFinal=15;
+    break;
+case 2:
+    montoFinal=15;
+    break;
+case 3:
+    montoFinal=15 + 5;
+    break;
+    default:
+    case 4:
+        window.alert('la opción es inexistente');
+        break;
+}
+}
+if(planes===3){
+switch(pantallas){
+case 1:
+    montoFinal=20;
+    break;
+case 2:
+    montoFinal=20;
+    break;
+case 3:
+    montoFinal=20;
+    break;
+case 4:
+    montoFinal=20;
+    break;
+default:
+    window.alert('la opción es inexistente');
+    break;
+}
+}
+if(contenido4k===1){
+montoFinal=montoFinal + 8;
+}
+window.alert(`El monto total del servicio de streaming es ${montoFinal}`);
