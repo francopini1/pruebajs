@@ -130,37 +130,6 @@ if(extensionDisco==1){
 window.alert(`El monto de la máquina sellecionada es ${montoFinal} USD`); 
  */
 /*
-Ejercicio 1 - Tienda de cámaras fotográficas
-Una tienda vende cámaras con las siguientes opciones:
-
-Tipo de cámara: Básica (1) USD 300, Profesional (2) USD 600, Ultra (3) USD 1000.
-
-Lente adicional: Sin lente (1), Telefoto (2) USD 150, Gran angular (3) USD 200.
-
-Estuche premium: Sí (1) USD 50, No (0).
-El programa debe pedir el tipo de cámara, el lente y si desea el estuche, luego calcular el total.
-Tip: Usa switch para manejar el tipo de cámara y el lente por separado.
-
-Ejercicio 2 - Servicio de streaming
-Un servicio ofrece tres planes: Básico (1) USD 10/mes, Estándar (2) USD 15/mes, Premium (3) USD 20/mes. Dependiendo de la cantidad de pantallas:
-
-Pantallas: 1 (1), 2 (2), 4 (3).
-
-Básico solo permite 1 pantalla.
-
-Estándar permite hasta 2 (si elige 3, cobrar USD 5 extra).
-
-Premium permite hasta 4.
-Además, si agrega contenido 4K (1 para sí, 0 para no), suma USD 8. Calcular el monto final.
-Tip: Valida combinaciones inválidas (ej: Básico + 2 pantallas).
-
-Ejercicio 3 - Vuelos en avión
-Una aerolínea tiene tres clases: Económica (1) USD 200, Ejecutiva (2) USD 500, Primera (3) USD 1000. Según el equipaje:
-
-Equipaje: 1 maleta (1), 2 maletas (2) USD 30 extra, 3 maletas (3) USD 60 extra.
-Si el pasajero elige asiento premium (1 para sí, 0 para no), suma USD 25. Calcular el total.
-Tip: Usa switch para clase y equipaje, y un if para el asiento premium.
-
 Ejercicio 4 - Cursos en línea
 Una plataforma ofrece cursos con tres niveles: Principiante (1) USD 50, Intermedio (2) USD 80, Avanzado (3) USD 120. Según el tipo de acceso:
 
@@ -280,27 +249,8 @@ Premium permite hasta 4.
 Además, si agrega contenido 4K (1 para sí, 0 para no), suma USD 8. Calcular el monto final.
 Tip: Valida combinaciones inválidas (ej: Básico + 2 pantallas).
 */
-/*
-planes:
-basico opción 1 =10usd
-Estandar opcion 2=15usd
-premium opcion 3=20usdc
 
-pantallas: 
-1 pantalla opcion 1
-2 pantallas opcion 2
-4 pantallas opcion 3 
-
-extra:
-basico permite solo una pantallla
-estandar permite solo 2(si elige 3,cobrar 5 usd más)
-premium hasta 4 pantallas
-
-Adicional
-si agrega contenido 4k(1para si, cero para no) y al monto final se le suma 8usd
- */
-
-let planes=parseInt(prompt('ingrese la opción de plan requrida'));
+/* let planes=parseInt(prompt('ingrese la opción de plan requrida'));
 let pantallas=parseInt(prompt('ingrese las opciones de cantidad de pantallas'));
 let contenido4k=parseInt(prompt('si desea agregar contenido 4k(1 para si,0 para no)'));
 
@@ -373,4 +323,18 @@ default:
 if(contenido4k===1){
 montoFinal=montoFinal + 8;
 }
-window.alert(`El monto total del servicio de streaming es ${montoFinal}`);
+window.alert(`El monto total del servicio de streaming es ${montoFinal} USD`); */
+
+/*
+Ejercicio 3 - Vuelos en avión
+Una aerolínea tiene tres clases: Económica (1) USD 200, Ejecutiva (2) USD 500, Primera (3) USD 1000. Según el equipaje:
+
+Equipaje: 1 maleta (1), 2 maletas (2) USD 30 extra, 3 maletas (3) USD 60 extra.
+Si el pasajero elige asiento premium (1 para sí, 0 para no), suma USD 25. Calcular el total.
+Tip: Usa switch para clase y equipaje, y un if para el asiento premium.
+*/
+
+/* //ejercicio 3
+let clases=parseInt(prompt('Ingrese la opción de clase'));
+let equipaje=parseInt(prompt('Ingrese la opción de equipaje'));
+ */
