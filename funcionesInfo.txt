@@ -1,0 +1,37 @@
+function saludar (){ 
+    console.log('hola mundo')
+}
+
+saludar();
+
+° declaramos la function saludar
+° le damos un nombre y realizamos la estructura dentro de los (aca van los paramentros)
+° y podemos poner un console.log con un mensaje adentro, especificamente no retorna ningún valor
+° Las funciones que no retornan nada tienen el tipo void (vacia)
+
+function suma(){
+    return 2 + 2; /4
+
+}
+
+let resultado = suma(); /1
+console.log(resultado); /2
+console.log( suma() );  /3
+
+1° Creo una variable llamada resultado la cual va a ser igual a la ejecución de la funcion suma.
+2°luego imprimimos en consola la variable resultado, que almacena la función.
+3° Es otra forma de imprimir la funcion en consola.
+
+
+4° La palabra reservada (return), es sumamente importante porqué nos va a permitir reutilizar código,
+  que se encuentre dentro de las llaves de la funcion, estas van a calcular algo,y nos van a devolver un valor que vamos a poder utilizar en un
+  futuro.
+
+                                                |Argumentos y parámetros|
+
+funcion suma(a , b){  / a y b= a los parametros.
+    return a + b ,
+}
+°Invoco a la funcion
+suma(5 , 7) / estos son los Argumentos, que suplantan 
+

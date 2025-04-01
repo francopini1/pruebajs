@@ -73,6 +73,7 @@ aclaratorio si el mismo es primo o no es primo.
 Nota: un numero es primo cuando es divisible únicamente por 1 y por sí
 mismo.
 */
+
 /* let numero=parseInt(prompt('Por favor ingresar un numero'));
 let result=0;
 let cont=0;
@@ -86,6 +87,7 @@ window.alert('es primo');
 }else{
     window.alert('no es primo');
 } */
+
 /*
 si numero en este caso ponemos ej 5 y digo si numero dividido i que en el caso es el inicializador que v tomando el valor por cada iteración
 hasta llegar a su valor el resultado seria el valor del num div por la iteración que da como resultado si es primo(divisible por si mismo o uno)
